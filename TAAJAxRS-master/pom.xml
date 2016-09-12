@@ -38,6 +38,14 @@
 			<version>3.0.13.Final</version>
 		</dependency>
 
+
+		<dependency>
+			<groupId>io.swagger</groupId>
+			<artifactId>swagger-jaxrs</artifactId>
+			<version>1.5.0</version>
+		</dependency>
+
+
 	</dependencies>
 	<build>
 		<defaultGoal>install</defaultGoal>

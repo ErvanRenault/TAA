@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<context-param>
+    <param-name>resteasy.providers</param-name>
+    <param-value>
+      io.swagger.jaxrs.listing.ApiListingResource,
+      io.swagger.jaxrs.listing.SwaggerSerializers,
+      {People,Vehicule,Specie,Film,Planet,Starship}
+    </param-value>
+  </context-param>

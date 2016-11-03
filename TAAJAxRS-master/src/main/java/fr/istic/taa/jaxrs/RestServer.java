@@ -1,16 +1,14 @@
 package fr.istic.taa.jaxrs;
 
-import io.undertow.Undertow;
-
-import org.jboss.resteasy.plugins.server.tjws.TJWSServletServer.FileMappingServe;
-import org.jboss.resteasy.plugins.server.undertow.UndertowJaxrsServer;
-
-import fr.istic.taa.jaxrs.domain.Film;
-import fr.istic.taa.jaxrs.domain.People;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
+
+import org.jboss.resteasy.plugins.server.undertow.UndertowJaxrsServer;
+
+import fr.istic.taa.jaxrs.domain.Film;
+import fr.istic.taa.jaxrs.domain.Planet;
+import io.undertow.Undertow;
 
 /**
  * RESTfull microservice, based on JAX-RS and JBoss Undertow
@@ -21,6 +19,7 @@ public class RestServer {
     private static final Logger logger = Logger.getLogger(RestServer.class.getName());
 
     public static List<Film> films = new ArrayList<Film>();
+    public static List<Planet> planets = new ArrayList<Planet>();
     
     public static void main( String[] args ) {
 
@@ -60,6 +59,18 @@ public class RestServer {
 				films.add(f3);films.add(f4);
 				films.add(f5);films.add(f6);
 				films.add(f7);films.add(f8);
+				
+				
+				
+				
+				
+				
+				 Planet p1 =  new Planet("Coruscant", 12240, 92448200);
+				 Planet p2 =  new Planet("Tatooine", 15000, 3782);
+				 Planet p3 =  new Planet("Mustafar", 4000, 10);
+				 Planet p4 =  new Planet("Mandalore", 7800, 8700); 
+				 Planet p5 =  new Planet("Naboo", 12400, 547850);
+				 Planet p6 =  new Planet("Alderaan", 0, 0);
 				
 				
 	}

@@ -47,9 +47,7 @@ public class StatusEndpoint {
 	
 			
 
-	private Planet planets[] = { new Planet("Coruscant", 12240, 92448200), new Planet("Tatooine", 15000, 3782),
-			new Planet("Mustafar", 4000, 10), new Planet("Mandalore", 7800, 8700), new Planet("Naboo", 12400, 547850),
-			new Planet("Alderaan", 0, 0), };
+	
 
 	private Specie species[] = { new Specie("Human", "mammal", "sentient"),
 			new Specie("Droid", "artificial", "sentient"), new Specie("Wookie", "mammal", "sentient"),
@@ -123,7 +121,7 @@ public class StatusEndpoint {
 	@Path("/planet/{id}/")
 	@Produces(MediaType.APPLICATION_JSON)
 	public Planet getPlanet(@PathParam("id") String id) {
-		return planets[Integer.parseInt(id)];
+		return RestServer.planets.get(Integer.parseInt(id));
 	}
 
 	/** Vehicule **/
@@ -192,6 +190,9 @@ public class StatusEndpoint {
 	public void addFilm(Film f){
 		RestServer.films.add(new Film(f.title,f.episode_id, f.created));
 	}
+	
+	@DELETE
+	@Path
 	
 	
 
